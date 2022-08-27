@@ -1,0 +1,47 @@
+{
+  
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "posts": [
+    {
+      "id": 1,
+      "role": "Embedded Software Developer",
+      "company":"Horner Engineering India Pvt. Ltd.",
+      "address":"Bengaluru, Karnataka",
+      "payscale":"₹6,00,000 - ₹18,00,000 a year",
+      "jobtype":"Full-time",
+      "shift":"Day shift",
+      "apply":"Apply securely with Indeed resume",
+      "employer":"Responsive employer",
+      "candidates":"Hiring multiple candidates",
+      "description":["Identifying and reporting potential risks and omissions in hardware platform design and embedded software related manufacturing processes",
+      "Adequate training for production stuff in using available software tools, design rules and procedures during T2MFR stages"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Backend Developer",
+      "company":"Wexo",
+      "address":"Bengaluru, Karnataka",
+      "payscale":"₹6,00,000 - ₹18,00,000 a year",
+      "jobtype":"Full-time",
+      "shift":"Day shift",
+      "apply":"Apply securely with Indeed resume",
+      "employer":"Responsive employer",
+      "candidates":"Hiring multiple candidates",
+      "description":["Identifying and reporting potential risks and omissions in hardware platform design and embedded software related manufacturing processes",
+      "Adequate training for production stuff in using available software tools, design rules and procedures during T2MFR stages"
+      ]
+    }
+
+  ]
+
+}
