@@ -4,11 +4,11 @@ import {Link} from "react-router-dom"
 import { FaFacebook,FaTwitter,FaGoogle} from 'react-icons/fa';
 import { AppContext } from '../Context/AppContext';
 export default function SigninPage() {
-  const { user,setUser } = React.useContext(AppContext);
+  const { email,setEmail } = React.useContext(AppContext);
   function handleEmail(e)
   {
 
-setUser(prev=>{ 
+setEmail(prev=>{ 
   return{
       ...prev,email:e.target.value
   }

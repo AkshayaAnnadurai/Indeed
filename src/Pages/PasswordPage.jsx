@@ -1,11 +1,12 @@
 import React from 'react'
 import { Button, FormControl,FormLabel,Input,Image,Box,Heading,Text,VStack, Container } from '@chakra-ui/react'
 import { AppContext } from '../Context/AppContext';
+import { Link } from 'react-router-dom';
 export default function PasswordPage() {
-    const { user,setUser } = React.useContext(AppContext);
+    const {password,setPassword,isAuth,setIsAuth,email} = React.useContext(AppContext);
     function handlePassword(e)
     {
-        setUser(prev=>{ 
+        setPassword(prev=>{ 
             return{
                 ...prev,password:e.target.value
             }
@@ -15,26 +16,30 @@ export default function PasswordPage() {
     function handleSubmit(e){
      
       e.preventDefault();
-      const data=JSON.parse(localStorage.getItem("userdata"))|| []
-localStorage.setItem("userdata",JSON.stringify([...data,user]))
-const arr=JSON.parse(localStorage.getItem("userdata")) 
-var a=false
-for(var i=0;i<arr.length;i++)
-{
-if(arr[i].email===data.useremail)
-{
-if(arr[i].password===data.userpassword)
-{
-alert("Login Success")
-    a=true
-}
-}
 
-}
-if(a===false)
-{
-    alert("Failed")
-}
+    
+setIsAuth(true)
+
+//       const data=JSON.parse(localStorage.getItem("userdata"))|| []
+// localStorage.setItem("userdata",JSON.stringify([...data,user]))
+// const arr=JSON.parse(localStorage.getItem("userdata")) 
+// var a=false
+// for(var i=0;i<arr.length;i++)
+// {
+// if(arr[i].email===data.useremail)
+// {
+// if(arr[i].password===data.userpassword)
+// {
+// alert("Login Success")
+//     a=true
+// }
+// }
+
+// }
+// if(a===false)
+// {
+//     alert("Failed")
+// }
 
     }
     
@@ -44,6 +49,7 @@ if(a===false)
 
   return (
     <div>
+       
        <Container m="auto">
        <Image h="50px" src="https://tse2.mm.bing.net/th?id=OIP.dpAR5dRLYnnCTYxwzmKMEgHaB7&pid=Api&P=0" alt="logo" />
  <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' textAlign="left" pl="5">
@@ -69,7 +75,7 @@ if(a===false)
   <VStack>
   <Input onChange={handlePassword} placeholder='' />
   <Button onClick={handleSubmit} colorScheme='blue' size='lg'>
-  Signin
+  <Link to="/login">Signin</Link>
   </Button>
   <Button colorScheme='teal' variant='ghost'>
    Forgot Password

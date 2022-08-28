@@ -42,7 +42,7 @@ export default function Employer() {
      </Container>
      <Container marginLeft="200px" pt="40px">
       <HStack gap="10px">
-<Box display="flex" width="auto" border="1px solid red">
+<Box display="flex" width="auto" >
    <Box  minH="180px" pr="2rem">
    <Image width="100%" src="https://d34k7i5akwhqbd.cloudfront.net/allspark/static/images/visibility-aurora-01633a.svg" alt="piv1" />
 </Box>

@@ -15,7 +15,7 @@ const[data,setData] =useState([])
           const res=await axios.get(`https://minmini-server.herokuapp.com/jobposts/${id}`)
          
         // const filt=res.data.filter((el)=>(el.name===filterstate))
-        console.log(res.data)
+       
           setData(res.data)
           }
           catch(err){
@@ -24,7 +24,7 @@ const[data,setData] =useState([])
         }
         getData(params.id)
         },[params.id])
-        console.log(params.id)
+      
   return (
     <div>
        <Container>
@@ -53,7 +53,7 @@ const[data,setData] =useState([])
         
     </Box>
    
-    {/* <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' textAlign="left" pl="5">
+    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' textAlign="left" pl="5">
      
       <Heading as='h4' size='md'>
  Job Details
@@ -81,12 +81,12 @@ const[data,setData] =useState([])
       <Heading>Full Job Description</Heading>
       <Text> Key Accountabilities
                </Text>
-               <Text>
-              {data.description[0]}
-              </Text>
               <Text>
-              {data.description[1]}
+{data.description}
               </Text>
+              {/* <Text>
+              {data.description[1]}
+              </Text> */}
     </Box>  
    
  <Box>
@@ -98,14 +98,11 @@ const[data,setData] =useState([])
             <Text>
            
            </Text>
-         
-         <ButtonGroup leftIcon={<Icon>
-          
-         </Icon>}>
-  
+        
+  <Button>
         {data.jobtype}
         
-         </ButtonGroup>
+        </Button>
    
            
           
@@ -119,7 +116,7 @@ const[data,setData] =useState([])
               {data.candidates}
               </Text>
               </Box>    
-              </Box>  */}
+              </Box>  
     </Container>  
     </div>
   )

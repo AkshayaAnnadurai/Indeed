@@ -1,13 +1,17 @@
 
 
-import { Container,Image,Flex} from '@chakra-ui/react'
+import { Container,Image,Flex, Heading} from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
+import { useContext } from 'react'
 
 import {Link} from "react-router-dom"
+import { AppContext } from '../Context/AppContext'
 
 
 
 export default function Navbar() {
+  const {isAuth,email} =useContext(AppContext)
+  console.log(email,"email")
   return (
 <Container maxW='100%' pt="10px" pb="10px" >
   <Flex>
@@ -33,7 +37,7 @@ spacing="5"
 
  justify="space-evenly">
   <Link to="/signin"> <Text>Post your resume</Text></Link>
-   <Link to="/signin"> <Text>Sign in</Text></Link>
+  {isAuth? (<Heading fontSize="md">akshaysrij@gmail.com</Heading>) : (<Link to="/signin"> <Text>Sign in</Text></Link> )   }
    <Link to="/postjob"> <Text>Employers/Post job</Text></Link>
   </Flex>
   </Container>

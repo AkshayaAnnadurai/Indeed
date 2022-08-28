@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes,Route} from 'react-router-dom'
 import Description from '../Components/Description'
+import LoginUp from '../Components/LoginUp'
 import CompanyreviewsPage from '../Pages/CompanyreviewsPage'
 import HomePage from '../Pages/HomePage'
 import PasswordPage from '../Pages/PasswordPage'
@@ -19,6 +20,7 @@ export default function AllRoutes() {
             <Route path="/postjob" element={<PostjobPage /> } />
             <Route path="/password" element={<PasswordPage />} />
             <Route path="/description/:id" element={<Description />} />
+            <Route path="/login" element={<LoginUp />} />
         </Routes>
     </div>
   )
