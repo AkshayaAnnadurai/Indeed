@@ -17,10 +17,28 @@ export default function PasswordPage() {
       e.preventDefault();
       const data=JSON.parse(localStorage.getItem("userdata"))|| []
 localStorage.setItem("userdata",JSON.stringify([...data,user]))
-const ans=localStorage.getItem("userdata")
-console.log(data,ans,user,"hiii")
+const arr=JSON.parse(localStorage.getItem("userdata")) || []
+var a=false
+for(var i=0;i<arr.length;i++)
+{
+if(arr[i].email===data.useremail)
+{
+if(arr[i].password===data.userpassword)
+{
+alert("Login Success")
+    a=true
+}
+}
+
+}
+if(a===false)
+{
+    alert("Failed")
+}
+
+    }
     
-   }
+   
 
 
 
