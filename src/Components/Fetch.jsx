@@ -1,31 +1,17 @@
-import React, { useEffect, useState } from 'react'
-
-import axios from "axios"
+import React from 'react'
+import {Link } from "react-router-dom"
 import {Text, Box,Heading, ButtonGroup, Icon } from '@chakra-ui/react'
-export default function Fetch() {
-    const[details,setDetails] =useState([])
-    useEffect(()=>{
-async function getData(){
-try{
-    const res=await axios.get(`http://localhost:3000/posts`)
+export default function Fetch({details}) {
    
-    setDetails(res.data)
-    }
-    catch(err){
-      console.log(err)
-    }
-  }
-  getData()
-},[])
-   
+   console.log(details)
   return (
    <>
     {details.map((data)=>( 
      <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' textAlign="left" pl="5">
      
-     <Heading as='h4' size='md'>
+   <Link to={`/description/${data.id}`}>  <Heading as='h4' size='md'>
    {data.role}
-  </Heading>
+  </Heading></Link>
          <Text>
             {data.company} </Text>
          

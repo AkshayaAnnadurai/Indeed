@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Input,Text,InputGroup,InputLeftElement,InputRightElement,Button,Icon } from '@chakra-ui/react'
 import {SearchIcon } from '@chakra-ui/icons'
 import {Link} from "react-router-dom"
@@ -6,7 +6,35 @@ import PopularSearch from '../Components/PopularSearch'
 import Footer from '../Components/Footer'
 import Fetch from '../Components/Fetch'
 
+import axios from "axios"
 export default function HomePage() {
+  const[details,setDetails] =useState([])
+  const[state,setState]=useState("")
+  const[filterstate,setFilterState]=useState("")
+function handleChange(e){
+setState(e.target.value)
+}
+function handleSubmit(state){
+  setFilterState(state)
+}
+  
+  useEffect(()=>{
+async function getData(){
+try{
+  const res=await axios.get(`https://minmini-server.herokuapp.com/jobposts`)
+ 
+const filt=res.data.filter((el)=>(el.name===filterstate))
+  setDetails(filt)
+  }
+  catch(err){
+    console.log(err)
+  }
+}
+getData()
+},[filterstate])
+
+console.log(filterstate, "hi")
+console.log(details,"hello")
   return (
     <div style={{marginTop:"50px"}}>
     <div style={{display:"flex",marginLeft:"250px"}}>
@@ -16,7 +44,7 @@ export default function HomePage() {
       <InputLeftElement pl="2rem" >
         <Text>What</Text>
       </InputLeftElement>
-      <Input pl="4.5rem" 
+      <Input pl="4.5rem" onChange={handleChange}
       
         placeholder='Job title, keywords, or company'
         
@@ -43,15 +71,15 @@ placeholder='City,state or pin code'
 
 </div>
 <div>
-<Button colorScheme='blue' size='md'>
+<Button colorScheme='blue' size='md' onClick={()=>handleSubmit(state)}>
    Find jobs
   </Button>
 </div>
 </div>
 <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"20px"}}><Link to="/sigin" ><Text color="blue">Post your resume</Text></Link><Text>- It only takes a few seconds</Text></div>
 <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"20px"}}><Link to="/postjob" ><Text color="blue">Employers: Post a job </Text></Link><Text>– Your next hire is here</Text></div>
-<PopularSearch />
-<Fetch />
+<PopularSearch setFilterState={setFilterState} />
+<Fetch details={details}/>
 <Footer />
 </div>
   )
