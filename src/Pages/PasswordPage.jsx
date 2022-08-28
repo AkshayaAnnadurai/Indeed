@@ -17,7 +17,7 @@ export default function PasswordPage() {
       e.preventDefault();
       const data=JSON.parse(localStorage.getItem("userdata"))|| []
 localStorage.setItem("userdata",JSON.stringify([...data,user]))
-const arr=JSON.parse(localStorage.getItem("userdata")) || []
+const arr=JSON.parse(localStorage.getItem("userdata")) 
 var a=false
 for(var i=0;i<arr.length;i++)
 {

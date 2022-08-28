@@ -76,7 +76,7 @@ placeholder='City,state or pin code'
   </Button>
 </div>
 </div>
-<div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"20px"}}><Link to="/sigin" ><Text color="blue">Post your resume</Text></Link><Text>- It only takes a few seconds</Text></div>
+<div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"20px"}}><Link to="/signin" ><Text color="blue">Post your resume</Text></Link><Text>- It only takes a few seconds</Text></div>
 <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:"20px"}}><Link to="/postjob" ><Text color="blue">Employers: Post a job </Text></Link><Text>– Your next hire is here</Text></div>
 <PopularSearch setFilterState={setFilterState} />
 <Fetch details={details}/>

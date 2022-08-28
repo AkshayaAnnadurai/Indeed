@@ -19,27 +19,27 @@ export default function PopularSearch({setFilterState}) {
   <Button onClick={()=>handleClick("driver")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
   driver
   </Button>
-  <Button onClick={()=>handleClick("hrfresher")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline' pl="2rem" pr="2rem">
+  <Button onClick={()=>handleClick("hr fresher")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline' pl="2rem" pr="2rem">
    hr fresher
   </Button>
-  <Button onClick={()=>handleClick("softwaretesting")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline' pl="2rem" pr="2rem">
+  <Button onClick={()=>handleClick("software testing")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline' pl="2rem" pr="2rem">
   software testing
   </Button>
   </Stack>
   <Stack direction='row' spacing={4}>
-          <Button onClick={()=>handleClick("salesexecutive")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
+          <Button onClick={()=>handleClick("sales executive")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
    sales executive
   </Button>
-  <Button onClick={()=>handleClick("businessanalyst")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
+  <Button onClick={()=>handleClick("business analyst")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
    business analyst
   </Button>
   <Button onClick={()=>handleClick("receptionist")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
   receptionist
   </Button>
-  <Button onClick={()=>handleClick("dataanalyst")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
+  <Button onClick={()=>handleClick("data analyst")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
  data analyst
   </Button>
-  <Button onClick={()=>handleClick("seoexecutive")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
+  <Button onClick={()=>handleClick("seo executive")} leftIcon={<SearchIcon />} colorScheme='grey' variant='outline'>
   seo executive
   </Button>
   </Stack>
