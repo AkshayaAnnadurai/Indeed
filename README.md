@@ -7,7 +7,7 @@
 ---
 # Link to our Project website:
 
-https://profound-yeot-1d409e.netlify.app/
+https://indeed-eight.vercel.app/
 ---
 
 ### About this project: :raised_hands:
