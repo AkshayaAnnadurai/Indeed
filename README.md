@@ -7,7 +7,7 @@
 ---
 # Link to our Project website:
 
-https://indeed-eight.vercel.app/
+https://deft-begonia-e42f58.netlify.app/
 ---
 
 ### About this project: :raised_hands:
